@@ -1,28 +1,35 @@
 package com.betrybe.sistemadevotacao;
 
+/**
+ * javadoc.
+ */
 public class PessoaCandidata extends Pessoa {
-    public int numeros;
-    public int votos;
+  public int numeros;
+  public int votos;
 
-    public PessoaCandidata(String nome, int numeros) {
-        super.nome = nome;
-        this.numeros = numeros;
-        this.votos = 0;
-    }
+  /**
+    * Getters and Setters.
+    */
 
-    public int getNumeros() {
-        return numeros;
-    }
+  public PessoaCandidata(String nome, int numeros) {
+    super.nome = nome;
+    this.numeros = numeros;
+    this.votos = 0;
+  }
 
-    public int getVotos() {
-        return votos;
-    }
+  public int getNumeros() {
+    return numeros;
+  }
 
-    public void setNumeros(int numeros) {
-        this.numeros = numeros;
-    }
+  public int getVotos() {
+    return votos;
+  }
 
-    public void receberVoto() {
-        this.votos++;
-    }
+  public void setNumeros(int numeros) {
+    this.numeros = numeros;
+  }
+
+  public void receberVoto() {
+    this.votos++;
+  }
 }
