@@ -16,25 +16,29 @@ public abstract class GerenciamentoVotacao implements GerenciamentoVotacaoInterf
 
   public void cadastrarPessoaCandidata(String nome, int numero) {
     for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
-      if (pessoaCandidata.numeros == numero) {
+      if (pessoaCandidata.getNumero() == numero) {
         System.out.println("Número da pessoa candidata já utilizado!");
         return;
-       } else {
-         PessoaCandidata novaPessoaCandidata = new PessoaCandidata(nome, numero);
-         pessoasCandidatas.add(novaPessoaCandidata);
-       }
-     }
-   }
+      } else {
+        PessoaCandidata novaPessoaCandidata = new PessoaCandidata(nome, numero);
+        pessoasCandidatas.add(novaPessoaCandidata);
+      }
+    }
+  }
+
+  /**  
+   * Getters and Setters.
+   */
 
   public void cadastrarPessoaEleitora(String nome, String cpf) {
     for (PessoaEleitora pessoaEleitora : pessoasEleitoras) {
       if (pessoaEleitora.getCpf() == cpf) {
         System.out.println("Pessoa eleitora já cadastrada!");
         return;
-       } else {
-         PessoaEleitora novaPessoaEleitora = new PessoaEleitora(nome, cpf);
-         pessoasEleitoras.add(novaPessoaEleitora);
-       }
-     }
-   }
+      } else {
+        PessoaEleitora novaPessoaEleitora = new PessoaEleitora(nome, cpf);
+        pessoasEleitoras.add(novaPessoaEleitora);
+      }
+    }
+  }
 }
